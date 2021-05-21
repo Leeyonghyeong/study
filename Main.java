@@ -1,29 +1,23 @@
 package test;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Main {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		
-		int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
-		int temp;
+		Calendar now = Calendar.getInstance();
+		int year = now.get(Calendar.YEAR);
 		
-		for(int i = 0; i < arr.length - 1; i++) {
-			for(int j = i + 1; j < arr.length; j++) {
-				if(arr[i] > arr[j]) {
-					temp = arr[i];
-					arr[i] = arr[j];
-					arr[j] = temp;
-				}
-			}
-		}
+		System.out.println(year);
 		
-		for(int i : arr) {
-			System.out.println(i);
-		}
+	}
+	
+	public static void intVar(int... i) {
+		System.out.println(Arrays.toString(i));
 	}
 	
 	public static long test(long n) {
